@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const lang = "ja";
+const title = "素晴らしい日本ガイド — プレミアム体験";
+const description = "パフォーマンスとSEOに重点を置いた、コンテンツ重視の二言語（PT/JA）サイト。";
+const alternates = [
+  { hreflang: "pt", href: "/pt/" },
+  { hreflang: "ja", href: "/ja/" },
+  { hreflang: "x-default", href: "/pt/" }
+];
+const nav = { home: "/ja/", contact: "/ja/contact", switchHref: "/pt/" };
+---
+
+<Layout {lang} {title} {description} {alternates} {nav}>
+  <h1 class="text-3xl font-bold mb-4">日本でのプレミアムな体験</h1>
+  <p class="mb-6">高品質な観光ガイドサービス。高速でSEOに強いサイト。</p>
+  <a class="text-blue-700 underline" href="/ja/contact">お問い合わせ</a>
+</Layout>

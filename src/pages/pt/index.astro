@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const lang = "pt";
+const title = "Guia Japão Incrível — Experiências Premium no Japão";
+const description = "Site bilíngue (PT/JA) com foco em performance, SEO e páginas orientadas a conteúdo.";
+const alternates = [
+  { hreflang: "pt", href: "/pt/" },
+  { hreflang: "ja", href: "/ja/" },
+  { hreflang: "x-default", href: "/pt/" }
+];
+const nav = { home: "/pt/", contact: "/pt/contato", switchHref: "/ja/" };
+---
+
+<Layout {lang} {title} {description} {alternates} {nav}>
+  <h1 class="text-3xl font-bold mb-4">Experiências premium no Japão</h1>
+  <p class="mb-6">Serviço de turismo e guia com foco em qualidade, performance e SEO.</p>
+  <a class="text-blue-700 underline" href="/pt/contato">Fale conosco</a>
+</Layout>

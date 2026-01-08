@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const lang = "pt";
+const title = "Fale conosco — Guia Japão Incrível";
+const description = "Entre em contato para experiências premium e roteiros personalizados no Japão.";
+const alternates = [
+  { hreflang: "pt", href: "/pt/contato" },
+  { hreflang: "ja", href: "/ja/contact" },
+  { hreflang: "x-default", href: "/pt/contato" }
+];
+const nav = { home: "/pt/", contact: "/pt/contato", switchHref: "/ja/contact" };
+---
+
+<Layout {lang} {title} {description} {alternates} {nav}>
+  <h1 class="text-2xl font-bold mb-4">Fale conosco</h1>
+  <p class="mb-6">Envie um email e retornaremos em breve.</p>
+  <a class="text-blue-700 underline" href="mailto:contact@example.com">contact@example.com</a>
+</Layout>

@@ -1,46 +1,47 @@
-# Astro Starter Kit: Basics
+# Guia Japão Incrível — MVP (PT/JA)
 
-```sh
-npm create astro@latest -- --template basics
+Bilingual (PT/JA) static website built with Astro and Tailwind. Focused on performance, SEO, and content‑driven pages.
+
+## Estrutura
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+│   ├── robots.txt
+│   └── sitemap.xml
+├── src/
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       ├── index.astro          # redirect / → /pt/
+│       ├── pt/
+│       │   ├── index.astro      # Home (PT)
+│       │   └── contato.astro    # Contact (PT)
+│       └── ja/
+│           ├── index.astro      # Home (JA)
+│           └── contact.astro    # Contact (JA)
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Rotas
+- `/` → redireciona para `/pt/`
+- `/pt/`, `/pt/contato`
+- `/ja/`, `/ja/contact`
 
-## 🧞 Commands
+## Convenções
+- SSG‑first (Astro). Mínimo JS; ilhas somente quando necessário.
+- Tailwind via `@tailwindcss/vite` (`src/styles/global.css`).
+- `Layout.astro` define `lang`, `title`, `description` e alternates `hreflang` (`pt`, `ja`, `x-default`).
 
-All commands are run from the root of the project, from a terminal:
+## SEO
+- `lang` por página; títulos e descrições localizados.
+- `robots.txt` e `sitemap.xml` estáticos (atualize o domínio em `public/sitemap.xml`).
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Comandos
+- `npm install`
+- `npm run dev` — http://localhost:4321
+- `npm run build` — saída em `dist/`
+- `npm run preview`
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Próximos passos
+- Atualizar email de contato em: `src/pages/pt/contato.astro` e `src/pages/ja/contact.astro` (contact@example.com → seu email).
+- Atualizar domínio no `public/sitemap.xml` (https://example.com → seu domínio).

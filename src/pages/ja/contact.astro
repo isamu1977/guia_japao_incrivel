@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const lang = "ja";
+const title = "お問い合わせ — 素晴らしい日本ガイド";
+const description = "プレミアムな日本観光体験についてお問い合わせください。";
+const alternates = [
+  { hreflang: "pt", href: "/pt/contato" },
+  { hreflang: "ja", href: "/ja/contact" },
+  { hreflang: "x-default", href: "/pt/contato" }
+];
+const nav = { home: "/ja/", contact: "/ja/contact", switchHref: "/pt/contato" };
+---
+
+<Layout {lang} {title} {description} {alternates} {nav}>
+  <h1 class="text-2xl font-bold mb-4">お問い合わせ</h1>
+  <p class="mb-6">メールでご連絡ください。</p>
+  <a class="text-blue-700 underline" href="mailto:contact@example.com">contact@example.com</a>
+</Layout>
