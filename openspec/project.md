@@ -15,7 +15,7 @@ with minimal client-side JavaScript.
 - Tailwind CSS 4.x via `@tailwindcss/vite`.
 - TypeScript with strict settings (`astro/tsconfigs/strict`).
 - ESM modules only (`"type": "module"`).
-- Package manager: npm.
+- Package manager: bun. Do not use npm/yarn/pnpm commands in this repository. Use bun.
 - No backend server or database in this repository.
 - Static deployment (e.g. Cloudflare Pages).
 
