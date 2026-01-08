@@ -36,11 +36,12 @@ Bilingual (PT/JA) static website built with Astro and Tailwind. Focused on perfo
 - `lang` por página; títulos e descrições localizados.
 - `robots.txt` e `sitemap.xml` estáticos (atualize o domínio em `public/sitemap.xml`).
 
-## Comandos
-- `npm install`
-- `npm run dev` — http://localhost:4321
-- `npm run build` — saída em `dist/`
-- `npm run preview`
+## Comandos (Bun)
+- `bun install`
+- `bun run dev` — http://localhost:4321
+- `bun run build` — saída em `dist/`
+- `bun run preview`
+- `bunx astro ...` — utilitários da CLI `astro`
 
 ## Próximos passos
 - Atualizar email de contato em: `src/pages/pt/contato.astro` e `src/pages/ja/contact.astro` (contact@example.com → seu email).
