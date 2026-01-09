@@ -34,8 +34,8 @@ const {
     <header class="p-4 border-b border-gray-200 flex items-center justify-between">
       <a href={nav.home} class="font-semibold">Guia Japão Incrível</a>
       <nav class="flex gap-4">
-        <a href={nav.home}>Home</a>
-        <a href={nav.contact}>Contato</a>
+        <a href={nav.home}>{lang === "ja" ? "HOME" : "Home"}</a>
+        <a href={nav.contact}>{lang === "ja" ? "お問い合わせ" : "Contato"}</a>
         <a href={nav.switchHref} class="underline">{lang === "pt" ? "日本語" : "Português"}</a>
       </nav>
     </header>
